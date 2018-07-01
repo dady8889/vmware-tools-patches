@@ -1,0 +1,13 @@
+[Unit]
+Description=VMWare Tools Thinprint Service
+After=network.target
+
+[Service]
+ExecStart=/etc/init.d/vmware-tools-thinprint start
+ExecStop=/etc/init.d/vmware-tools-thinprint stop
+PIDFile=/var/run/tpvmlpd.pid 
+TimeoutSec=0
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
